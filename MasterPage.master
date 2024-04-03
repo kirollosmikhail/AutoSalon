@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="css/masterstyle.css" rel="stylesheet" />
+    <link href="css/Stile.css" rel="stylesheet" />
+    <link href="css/slideshow.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+        <span id="fondo"></span>
+    <ul class="slideshow">
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+    </ul>
+    <form id="form1" runat="server">
+        <div id="header">
+            <a href="Homepage.aspx">
+                <img src="img/logo.png" id="logo" />
+            </a>
+        </div>
+
+        <%--inizio il menu orizzontale--%>
+
+         <div class="wrap">
+            <nav>
+                <ul class="primary">
+                    <li>
+                        <a href="Homepage.aspx">Automobili</a>
+
+                    </li>
+                    <li>
+                        <a href="#">Chi Siamo</a>
+
+                    </li>
+                    <li>
+                        <a href="#">Valuta la tua auto</a>
+
+                    </li>
+                    <li>
+                        <a href="#">Contatti</a>
+
+                    </li>
+                </ul>
+            </nav>
+            <a href="Login.aspx">
+                <img src="img/login.png" class="login" /></a>
+        </div>
+
+        <%--secondo menu--%>
+
+
+       <%-- <nav>
+            <div class="navbar">
+                <div class="container nav-container">
+                    <input class="checkbox" type="checkbox" name="" id="" />
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>
+                    <div class="logo">
+                        <a href="Homepage.aspx">
+                            <img src="img/logo.png" class="logo" />
+                        </a>
+                    </div>
+                    <div class="menu-items">
+                        <ul>
+                            <li><a href="Homepage.aspx">Automobili</a></li>
+                            <li><a href="#">Chi Siamo</a></li>
+                            <li><a href="#">Valuta Auto</a></li>
+                            <li><a href="#">Contatti</a></li>
+                            <li><a href="Login.aspx">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>--%>
+      
+
+        <%--fine menu orizzontale--%>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,134 @@
+﻿.slideshow {
+    list-style-type: none;
+}
+
+    /** SLIDESHOW **/
+    .slideshow,
+    .slideshow:after {
+        top: -16px; /*Not sure why I needed this fix*/
+        position: fixed;
+        width: 100%;
+        height: 216px;
+        left: 0px;
+        z-index: 0;
+        opacity: 0.8;
+    }
+
+        .slideshow li span {
+            position: absolute;
+            width: 100%;
+            height: 216px;
+            top: 0px;
+            left: 0px;
+            color: transparent;
+            background-size: cover;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            opacity: 0;
+            z-index: 0;
+            animation: imageAnimation 36s linear infinite 0s;
+        }
+
+
+
+        .slideshow li:nth-child(1) span {
+            background-image: url('../img/car1.jpg');
+            animation-delay: 6s;
+        }
+
+        .slideshow li:nth-child(2) span {
+            background-image: url('../img/car2.jpg');
+            animation-delay: 12s;
+        }
+
+        .slideshow li:nth-child(3) span {
+            background-image: url('../img/car3.jpg');
+            animation-delay: 18s;
+        }
+
+        .slideshow li:nth-child(4) span {
+            background-image: url('../img/car4.jpg');
+            animation-delay: 24s;
+        }
+
+        .slideshow li:nth-child(5) span {
+            background-image: url('../img/car5.jpg');
+            animation-delay: 30s;
+        }
+
+
+
+@keyframes imageAnimation {
+    0% {
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+
+    7% {
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+
+    17% {
+        opacity: 1
+    }
+
+    35% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes fondo {
+    0% {
+        opacity: 0.8;
+        animation-timing-function: ease-in;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 0;
+        animation-timing-function: ease-out;
+    }
+}
+
+#fondo,
+#fondo:after {
+    top: -16px; /*Not sure why I needed this fix*/
+    position: fixed;
+    width: 100%;
+    height: 216px;
+    left: 0px;
+    z-index: 0;
+    opacity: 0.8;
+}
+
+#fondo {
+    position: absolute;
+    width: 100%;
+    height: 216px;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: fondo 10s linear 0s;
+}
+
+#fondo {
+    background-image: url('../img/carStart.jpg');
+}
+
+
+.no-cssanimations .cb-slideshow li span {
+    opacity: 1;
+}

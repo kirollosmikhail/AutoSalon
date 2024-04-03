@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterProp.master.cs" Inherits="MasterProp" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="css/PropStile.css" rel="stylesheet" />
+    <link href="css/Stile.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="header">
+            <asp:Label ID="lblNome" runat="server" Text="" CssClass="lblNome"></asp:Label>
+            <img src="img/logo.png" id="logo" />
+            <asp:Button ID="btnLogout" runat="server" Text="Logout" CssClass="btnLogout" OnClick="btnLogout_Click" />
+        </div>
+        <div class="wrap">
+            <nav>
+                <ul class="primary">
+                    <li>
+                        <a>Automobili</a>
+                        <ul class="sub">
+                            <li><a href="RicercaAuto.aspx">Lista Auto</a></li>
+                            <li><a href="AggiungiAuto.aspx">Aggiungi Auto</a></li>
+                            <li><a href="ListaVendita.aspx">Vendi Auto</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>Marche</a>
+                        <ul class="sub">
+                            <li><a href="RicercaMarche.aspx">Lista Marche</a></li>
+                            <li><a href="AggiungiMarca.aspx">Aggiungi Marca</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>Modelli</a>
+                        <ul class="sub">
+                            <li><a href="RicercaModelli.aspx">Lista Modelli</a></li>
+                            <li><a href="AggiungiModello.aspx">Aggiungi modello</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>Vendita Auto</a>
+                        <ul class="sub">
+                            <li><a href="AutoVendute.aspx">Lista Auto vendute</a></li>
+                            <li><a href="Ricavi.aspx">Ricavi</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>AutoSaloni</a>
+                        <ul class="sub">
+                            <li><a href="RicercaAutoSaloni">Lista Autosaloni</a></li>
+                            <li><a href="AggiungiAutoSaloni">Aggiungi Autosaloni</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>Venditori</a>
+                        <ul class="sub">
+                            <li><a href="RicercaVenditori.aspx">Lista Venditori</a></li>
+                            <li><a href="AggiungiVenditori.aspx">Aggiungi Venditori</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>Area Titolare</a>
+                        <ul class="sub">
+                            <li>
+
+                                <asp:Literal ID="litRicavi" runat="server"></asp:Literal>
+
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
